@@ -1,0 +1,23 @@
+[package]
+name = "cypher-hyperion-vste"
+version = "0.1.0"
+edition = "2021"
+authors = ["CYPHER CORP <engineering@cypher.corp>"]
+description = "Vectorized Semantic Topology Enclave for Autonomous AI Agents"
+license = "BSL-1.1"
+readme = "README.md"
+repository = "https://github.com/cypher-security-labs/cypher-hyperion-vste"
+keywords = ["ai-safety", "enclave", "zero-allocation", "security", "agent"]
+categories = ["cryptography", "science", "no-std"]
+
+[dependencies]
+sha2 = { version = "0.10", default-features = false }
+
+[dev-dependencies]
+criterion = "0.5"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
