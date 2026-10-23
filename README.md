@@ -82,6 +82,12 @@ Execute Tool        Deterministic Halt
 3. **Formal Memory Safety Guarantee**: Compiled with `#![forbid(unsafe_code)]` to guarantee zero memory corruption vectors or undefined behavior at the runtime level.
 ## ⚡ Quick Start
 
+
+
+```toml
+[dependencies]
+cypher-hyperion-vste = "0.1"
+
 Add `cypher-hyperion-vste` to your `Cargo.toml`:
 
 ```toml
