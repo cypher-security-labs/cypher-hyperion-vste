@@ -25,7 +25,7 @@ Markdown
 - **Cryptographic Auditability**: Generates immutable SHA-256 state receipts for complete forensic SIEM integration.
 
 ---
-Markdown
+
 ## 🚀 Benchmarks & Performance Comparison
 
 Unlike legacy guardrail frameworks that rely on dynamic Python evaluation or auxiliary LLM self-critique calls, **Hyperion-Zero VSTE** operates as a zero-allocation, deterministic mathematical enclave.
@@ -80,13 +80,10 @@ Execute Tool        Deterministic Halt
 1. **Zero-Allocation Stack Execution**: All linear algebra operations for polytope intersection and boundary verification are computed entirely on the stack using static memory layouts.
 2. **Deterministic Cryptographic Audit Receipts**: Every policy decision generates an immutable SHA-256 state hash, enabling full forensic reproducibility for regulatory compliance (EU AI Act ready).
 3. **Formal Memory Safety Guarantee**: Compiled with `#![forbid(unsafe_code)]` to guarantee zero memory corruption vectors or undefined behavior at the runtime level.
+
+---
+
 ## ⚡ Quick Start
-
-
-
-```toml
-[dependencies]
-cypher-hyperion-vste = "0.1"
 
 Add `cypher-hyperion-vste` to your `Cargo.toml`:
 
@@ -120,6 +117,7 @@ Non-Commercial Use: Free to build, experiment, and run in development environmen
 Production & Enterprise Scale: Requires an active license key from CYPHER CORP.
 
 For enterprise deployments, custom SLA support, and cloud control plane access:
-📧 Contact: emmanuil.psilos@gmail.com | 🌐 GitHub: github.com/cypher-security-labs
+
+📧 Contact: emmanuil.psilos@gmail.com | 🌐 GitHub: cypher-security-labs
 
 © 2026 CYPHER CORP. All rights reserved.
