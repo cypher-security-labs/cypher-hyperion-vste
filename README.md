@@ -1,3 +1,5 @@
+
+```markdown
 # Hyperion-Zero VSTE 🛡️
 > **Vectorized Semantic Topology Enclave for Autonomous AI Agents**
 
@@ -11,11 +13,18 @@
 ---
 
 ## 🏛️ Core Architecture
+
+
+```
+
 [ Agent Input Context ] ──► [ Convex Polytope Enclave ] ──► [ SHA-256 Ledger Receipt ]
 │
 (Violation Check)
 │
 [ Immediate Abort ]
+
+```
+
 - **Zero-Allocation Execution**: No heap allocations during evaluation routines; bounded deterministic latency under 2ms.
 - **Convex Polytope Boundary Control**: Validates semantic intent against multi-dimensional hyperplanes.
 - **Cryptographic Auditability**: Generates immutable SHA-256 state receipts for complete forensic SIEM integration.
@@ -47,6 +56,10 @@ The following benchmarks were executed on an AMD EPYC 7763 (64-core) running Lin
 Hyperion-Zero VSTE models safety boundaries as high-dimensional **Convex Polytopes** ($P \subset \mathbb{R}^d$). An AI agent tool execution or embedding state $v \in \mathbb{R}^d$ is permitted **if and only if**:
 
 $$P = \{ x \in \mathbb{R}^d \mid A x \le b \}$$
+
+
+```
+
 [ Agent Tool Request / Embedding Vector v ]
 │
 ▼
@@ -68,6 +81,9 @@ Execute Tool        Deterministic Halt
 │
 ▼
 [ SHA-256 Cryptographic Receipt Generated ]
+
+```
+
 ### Key Technical Pillars
 
 1. **Zero-Allocation Stack Execution**: All linear algebra operations for polytope intersection and boundary verification are computed entirely on the stack using static memory layouts.
@@ -83,7 +99,12 @@ Add `cypher-hyperion-vste` to your `Cargo.toml`:
 ```toml
 [dependencies]
 cypher-hyperion-vste = "0.1"
-Basic Guard Example
+
+```
+
+### Basic Guard Example
+
+```rust
 use cypher_hyperion_vste::{HyperionEnclave, EnclaveConfig, SafetyResult};
 
 fn main() {
@@ -101,15 +122,26 @@ fn main() {
         }
     }
 }
-🔒 Enterprise & Commercial Licensing
-This repository is distributed under the Business Source License 1.1 (BSL-1.1).
 
-Non-Commercial Use: Free to build, experiment, and run in development environments.
+```
 
-Production & Enterprise Scale: Requires an active license key from CYPHER CORP.
+---
+
+## 🔒 Enterprise & Commercial Licensing
+
+This repository is distributed under the **Business Source License 1.1 (BSL-1.1)**.
+
+* **Non-Commercial Use**: Free to build, experiment, and run in development environments.
+* **Production & Enterprise Scale**: Requires an active license key from CYPHER CORP.
 
 For enterprise deployments, custom SLA support, and cloud control plane access:
 
-📧 Contact: emmanuil.psilos@gmail.com | 🌐 GitHub: cypher-security-labs
+📧 **Contact**: `emmanuil.psilos@gmail.com` | 🌐 **GitHub**: [cypher-security-labs](https://www.google.com/search?q=https://github.com/cypher-security-labs)
 
-© 2026 CYPHER CORP. All rights reserved.
+---
+
+*© 2026 CYPHER CORP. All rights reserved.*
+
+```
+
+```
