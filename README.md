@@ -16,15 +16,12 @@
 ## 🏛️ Core Architecture
 
 
-```
-
+```text
 [ Agent Input Context ] ──► [ Convex Polytope Enclave ] ──► [ SHA-256 Ledger Receipt ]
-│
-(Violation Check)
-│
-[ Immediate Abort ]
-
-```
+                                       │
+                                (Violation Check)
+                                       │
+                               [ Immediate Abort ]
 
 - **Zero-Allocation Execution**: No heap allocations during evaluation routines; bounded deterministic latency under 2ms.
 - **Convex Polytope Boundary Control**: Validates semantic intent against multi-dimensional hyperplanes.
@@ -58,32 +55,28 @@ Hyperion-Zero VSTE models safety boundaries as high-dimensional **Convex Polytop
 
 $$P = \{ x \in \mathbb{R}^d \mid A x \le b \}$$
 
-
-```
-
+```text
 [ Agent Tool Request / Embedding Vector v ]
-│
-▼
-┌─────────────────────────────────────┐
-│  Hyperion-Zero VSTE Polytope Guard  │
-│  - Pure Rust (#![forbid(unsafe)])   │
-│  - Sub-2ms Matrix Evaluation        │
-│  - Zero Heap Allocation             │
-└──────────────────┬──────────────────┘
-│
-┌─────────┴─────────┐
-▼                   ▼
-[ Matched: Safe ]   [ Boundary Violation ]
-│                   │
-▼                   ▼
-Execute Tool        Deterministic Halt
-│                   │
-└─────────┬─────────┘
-│
-▼
-[ SHA-256 Cryptographic Receipt Generated ]
-
-```
+                       │
+                       ▼
+    ┌─────────────────────────────────────┐
+    │  Hyperion-Zero VSTE Polytope Guard  │
+    │  - Pure Rust (#![forbid(unsafe)])   │
+    │  - Sub-2ms Matrix Evaluation        │
+    │  - Zero Heap Allocation             │
+    └──────────────────┬──────────────────┘
+                       │
+             ┌─────────┴─────────┐
+             ▼                   ▼
+    [ Matched: Safe ]   [ Boundary Violation ]
+             │                   │
+             ▼                   ▼
+      Execute Tool        Deterministic Halt
+             │                   │
+             └─────────┬─────────┘
+                       │
+                       ▼
+     [ SHA-256 Cryptographic Receipt Generated ]
 
 ### Key Technical Pillars
 
