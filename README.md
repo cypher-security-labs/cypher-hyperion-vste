@@ -1,4 +1,3 @@
-Markdown
 # Hyperion-Zero VSTE 🛡️
 > **Vectorized Semantic Topology Enclave for Autonomous AI Agents**
 
@@ -12,14 +11,11 @@ Markdown
 ---
 
 ## 🏛️ Core Architecture
-
 [ Agent Input Context ] ──► [ Convex Polytope Enclave ] ──► [ SHA-256 Ledger Receipt ]
 │
 (Violation Check)
 │
 [ Immediate Abort ]
-
-
 - **Zero-Allocation Execution**: No heap allocations during evaluation routines; bounded deterministic latency under 2ms.
 - **Convex Polytope Boundary Control**: Validates semantic intent against multi-dimensional hyperplanes.
 - **Cryptographic Auditability**: Generates immutable SHA-256 state receipts for complete forensic SIEM integration.
@@ -51,7 +47,6 @@ The following benchmarks were executed on an AMD EPYC 7763 (64-core) running Lin
 Hyperion-Zero VSTE models safety boundaries as high-dimensional **Convex Polytopes** ($P \subset \mathbb{R}^d$). An AI agent tool execution or embedding state $v \in \mathbb{R}^d$ is permitted **if and only if**:
 
 $$P = \{ x \in \mathbb{R}^d \mid A x \le b \}$$
-
 [ Agent Tool Request / Embedding Vector v ]
 │
 ▼
@@ -73,8 +68,6 @@ Execute Tool        Deterministic Halt
 │
 ▼
 [ SHA-256 Cryptographic Receipt Generated ]
-
-
 ### Key Technical Pillars
 
 1. **Zero-Allocation Stack Execution**: All linear algebra operations for polytope intersection and boundary verification are computed entirely on the stack using static memory layouts.
@@ -91,7 +84,6 @@ Add `cypher-hyperion-vste` to your `Cargo.toml`:
 [dependencies]
 cypher-hyperion-vste = "0.1"
 Basic Guard Example
-Rust
 use cypher_hyperion_vste::{HyperionEnclave, EnclaveConfig, SafetyResult};
 
 fn main() {
